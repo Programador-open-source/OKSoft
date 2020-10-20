@@ -1,0 +1,54 @@
+
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+<?link rel="stylesheet" type="text/css" href="/bootstrap/v3/css/bootstrap.css"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/Paginas/login/layout/template.zul"?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+
+    <window contentStyle="overflow:visible"  vflex="1" hflex="1" self="@define(content)" apply="" >
+        <div  style="min-height:68vh; height:auto !important; height:100%; ;margin:-4px; background-image: url(${c:encodeURL('/imgs/perfil/ua.png')}); background-repeat:no-repeat; background-size:100% 100%;" >
+
+            <div sclass="container">
+          
+                <vbox align="left" width="100%" spacing="5px">
+                    <separator />
+                    <image id="" src="/imgs/aval.png" width="150px"   height="25px"/>
+                    <separator bar="true"/>
+                    
+                </vbox> 
+            
+           
+            
+            
+                <separator height="30px"/>
+                <panel title="Formulario de avaliação" sclass="panel-primary" width="auto"> 
+                    <panelchildren>
+	    			
+	    			
+	                     
+                        <div class="row ">
+                
+                            
+                            <div class="col-lg-6">
+                                <hbox >
+                                    <vbox spacing="10px">
+                                        <hbox  style="float:right"> 
+                                          
+                                            <button  id="submeter" label="Submeter" tooltiptext="Submeter avaliação" image="/icon/ic_done_white_18dp.png"  sclass="btn btn-success"  />                        
+                                        </hbox>
+                                    </vbox>
+                                </hbox>
+                            
+                        
+                            </div>
+                        </div>
+                    
+                    </panelchildren>
+                </panel>
+                           
+               
+
+            </div>
+        </div>
+        
+    </window>
+</zk>

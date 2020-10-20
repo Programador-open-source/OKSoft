@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <div sclass="footer">
+        <vbox align="center" width="100%">
+            
+            <hbox height="100%" align="center">
+                <vbox align="center">
+
+                <hbox  height="100%" align="center">
+                    <a href ="termos.zul">Termos de uso</a> | <a href ="ajuda.zul.zul">Ajude-me</a>  |  <a href ="sobre.zul">Sobre nós</a>
+                </hbox>
+                <label>Copyright © - 2020 Matiyanga</label>
+                </vbox>
+            </hbox>
+            
+        
+        </vbox>
+        
+    </div>
+</zk>

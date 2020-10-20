@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+<?link rel="stylesheet" type="text/css" href="/bootstrap/v3/css/bootstrap.css"?>
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/Paginas/login/layout/templateAdmin.zul"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <hbox width="100vw" height="100vh" align="center">
+        <vbox width="100vw" align="center">
+    <panel title="Informação" sclass="panel-warning" width="auto"> 
+        <panelchildren>
+            <label style="color:#red; font-weight: bold; font-family: tahoma; font-size:25px" value="Pagina em Manuntenção"/>
+            <label value="Porfavor, Tente mais tarde"/>
+        </panelchildren>
+    </panel>
+        </vbox>
+    </hbox>
+
+</zk>

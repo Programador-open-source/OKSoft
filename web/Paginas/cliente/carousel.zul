@@ -1,0 +1,27 @@
+<?page title="ZK Carousel" contentType="text/html;charset=UTF-8"?>
+
+<?link rel="stylesheet" type="text/css" href="/css/jquery.bxslider.css"?>
+<zk>
+<script src="/css/jquery.bxslider.js"/>
+
+<script type="text/javascript"><![CDATA[
+
+ zk.afterMount(function() {
+
+          $("$slider1").bxSlider({
+        	  auto: true,
+        	  autoControls: true,
+        	  pause: 3000,
+        	  slideWidth: 650,
+        	  slideMargin: 4
+          });
+});]]></script>
+<div id="slider1" style=" border-color: transparent;" >
+  
+  <div  ><image src="/imgs/slide/slide_1.jpg" width="600px"  height="260px" /> </div>
+  <div ><image src="/imgs/slide/slide_2.png" width="auto"  height="260px"/> </div>
+  <div ><image src="/imgs/slide/slide_3.jpg" width="auto" height="260px"/>  </div>
+  <div ><image src="/imgs/slide/slide_4.jpg" width="600px"  height="260px"/>  </div>
+  <div ><image src="/imgs/slide/slide_5.jpg" width="600px" height="260px"/> </div>
+  </div>
+</zk>

@@ -1,0 +1,10 @@
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+<?link rel="stylesheet" type="text/css" href="/bootstrap/v3/css/bootstrap.css"?>
+<!-- protect page by the authentication init  -->
+<?init class="servicos.AutenticacaoInit"?>
+<!-- authentication init have to locate before composition -->
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/Paginas/login/layout/template.zul"?>
+
+<zk>
+	<include id="mainInclude" self="@define(content)" src="/Paginas/cliente/principalCliente.zul"/>
+</zk>

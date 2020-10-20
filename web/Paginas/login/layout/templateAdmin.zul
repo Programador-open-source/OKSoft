@@ -1,0 +1,33 @@
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+<?link rel="stylesheet" type="text/css" href="/bootstrap/v3/css/bootstrap.css"?>
+<!--<?init class="servicos.AutenticacaoInit"?>-->
+<zk>
+    
+
+    <script src="/bootstrap/zk/js/Button-bs.js"></script>
+    <script src="/bootstrap/zk/js/panel-bs.js"></script>
+
+    <div sclass="testa"  >
+        <style>
+            .testa{
+            background-image: linear-gradient(to bottom,#F0F0F0 ,#fff );
+            }
+        </style>
+        <div >
+            <div>
+                <include src="/Estrutura/bannerAdmin.zul"/> 
+            </div>
+    
+            <div id="mainContent"  self="@insert(content)">
+        
+            </div>
+    
+            <div  >
+                <include src="/Estrutura/footer.zul"/> 
+            </div>
+        </div>
+        
+    </div>
+
+</zk>
+

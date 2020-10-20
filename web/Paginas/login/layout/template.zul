@@ -1,0 +1,44 @@
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<?link rel="stylesheet" type="text/css" href="/bootstrap/v3/css/bootstrap.css"?>
+<!--<?init class="servicos.AutenticacaoInit"?>-->
+<zk>
+    
+
+    <script src="/bootstrap/zk/js/Button-bs.js"></script>
+    <script src="/bootstrap/zk/js/panel-bs.js"></script>
+
+    <div style="background-image: url(${c:encodeURL('/imgs/perfil/bac.png')}); background-repeat:no-repeat; background-size:100% 100%; ">
+        <style>
+            .testa{
+            background-image: linear-gradient(to top,whitesmoke ,whitesmoke);
+            }
+        </style>
+        <!--<div if="${not sessionScope.userCredential.anonymous}"  >-->
+            <div>
+                <include src="/Estrutura/bannerCliente.zul"/> 
+            </div>
+    
+            <div id="mainContent"  self="@insert(content)" >
+        
+            </div>
+    
+            <div>
+                <include src="/Estrutura/footer.zul"/> 
+            </div>
+        <!--</div>-->
+        <!--<div if="${sessionScope.userCredential.anonymous}">
+            Redirecionando para pagina de login.....
+        </div>-->
+    </div>
+
+
+    
+    
+    
+    
+    
+    
+   
+
+</zk>

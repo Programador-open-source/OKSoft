@@ -1,0 +1,58 @@
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+<?link rel="stylesheet" type="text/css" href="/bootstrap/v3/css/bootstrap.css"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<vbox hflex="1"  style="background-image: url(${c:encodeURL('/imgs/perfil/banner_customer.png')}); background-repeat:no-repeat; background-size:100% 100%; " >
+
+
+    <div style="height:130px" sclass="container" >
+        <vbox height="100%"  width="100%" pack="end">
+        <zscript><![CDATA[
+            
+        
+       
+        java.util.Map sites = new java.util.HashMap();
+        
+        sites.put("principal","/Paginas/cliente/principalCliente.zul");
+        sites.put("autenticacao","/Paginas/login/login.zul");
+        
+        void redirect(String name){
+        String loc = sites.get(name);
+            if(loc!=null){
+            
+                Executions.getCurrent().sendRedirect(loc);
+   
+            }
+        }
+     ]]></zscript>
+     
+      
+        
+        
+        
+            
+        <div width="100%" sclass="menubar container" >
+            <div class="row  " width="100%" >
+                <div style="float:left">                 
+                    <div class="btn-group " >
+                        <button id="princ" image="/icon/ic_home_white_18dp.png"  class="btn-primary" height="40px" style="border:0px; font-size:13px;font-weight: bold;" onClick='redirect("principal")'>PRINCIPAL</button>
+                    </div>
+                    <menupopup id="m1">
+                        <menuitem image="/icon/ic_account_box_white_24dp.png" label="Efectuar Login"/>
+                        
+                    </menupopup>
+                </div>
+                
+                <div style="float:right">
+                
+                    <div apply="" class="btn-group ">
+                        <button  image="/icon/ic_account_circle_white_18dp.png" dir="reverse" class="btn-primary btn-sm dropdown-toggle" popup="m1,after_start" iconSclass="caret" height="40px" style="border:0px; font-size:12.5px;font-weight: bold;" onClick='redirect("autenticacao")' label="Autenticação" ></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </vbox>
+    </div>
+   
+</vbox>
+

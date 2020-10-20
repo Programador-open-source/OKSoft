@@ -1,0 +1,101 @@
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+<?link rel="stylesheet" type="text/css" href="/bootstrap/v3/css/bootstrap.css"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+
+<zk>
+    
+    <vbox style="background-image: url(${c:encodeURL('/imgs/perfil/backl.png')}); background-repeat:no-repeat; background-size:100% 100%; " align="center" self="@define(content)"  apply="controlador.paginas.LoginController" vflex="1" hflex="1">
+        <script src="/bootstrap/zk/js/Button-bs.js"></script>
+        <script src="/bootstrap/zk/js/panel-bs.js"></script>
+        <hbox height="97vh" align="center">
+            <vbox align="center">
+                  
+                <vbox align="center" width="350px" style=" background-color:transparent; border-radius: 5px; ">
+                    <separator height="5px"/>
+                     
+                    <style>
+                        .test{
+                        background: #dfe8f6 url('../imgs/534029.jpg') no repeat center center;
+                        
+            
+                        }
+                    </style>
+                        
+                        
+                    <image id="" src="/imgs/log.png" width="320px"  height="152px"/>
+                    <hbox align="center">
+                        <image id="" src="/icon/ic_lock_black_24dp.png" width=""  height=""/>
+                        <label sclass="titulo" value="Autenticação" style="font-size:17px"/>
+                    </hbox>
+                
+                    <separator height="10px"/>
+                    <separator/>
+                    
+                        
+                        <label class="alert alert-danger" id="message"  visible="false" />
+                    
+                     
+                    <separator /> 
+                    <separator height="10px"/>
+                
+                    <vbox hflex="1" vflex="1" spacing="15px" align="center" >
+                
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button image="/icon/ic_account_box_white_24dp.png" height="45px" class="btn-primary"  />
+                            </span>
+                                    
+                            <textbox id="account" sclass="form-control" width="257px" height="45px" placeholder="utilizador" />
+                                   
+                            
+                        </div>
+                
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button image="/icon/ic_vpn_key_white_24dp.png" height="45px" class="btn-primary"  />
+                            </span>
+                                    
+                            <textbox id="password"  type="password" height="45px" width="257px" sclass="form-control" placeholder="senha" />
+                                   
+                            
+                        </div>
+                        <div class="input-group">
+                            <button id="login" height="45px" image="/icon/ic_lock_open_white_24dp.png" label="Entrar" sclass="btn btn-primary" style="" width="307px"/>
+                        </div>    
+                        <a href ="termos.zul">Esqueci-me da senha</a>
+                    
+                        <separator height="10px"/> 
+                
+                    </vbox>
+                        
+                
+                    
+                </vbox>
+                    
+        
+
+                <vbox  align="center" width="350px" sclass=""  style="margin-top: -10px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+                    <vbox align="center" width="100%">
+            
+                        <hbox height="8vh" align="center">
+                            <vbox align="center">
+
+                                <hbox >
+                                    <a href ="termos.zul">Termos de uso</a> | <a href ="ajuda.zul.zul">Ajude-me</a>  |  <a href ="sobre.zul">Sobre nós</a>
+                                </hbox>
+                                <label>Copyright © - 2020 Matiyanga</label>
+                            </vbox>
+                        </hbox>
+            
+        
+                    </vbox>
+                </vbox>
+            </vbox>
+        </hbox>
+    </vbox>
+       
+   
+    
+ 
+</zk>

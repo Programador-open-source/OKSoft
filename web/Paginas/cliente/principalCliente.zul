@@ -1,0 +1,103 @@
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+<?link rel="stylesheet" type="text/css" href="/bootstrap/v3/css/bootstrap.css"?>
+<!--<?init class="servicos.AutenticacaoInit"?>-->
+<!-- authentication init have to locate before composition -->
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/Paginas/login/layout/template.zul"?>
+<?page title="Customer Care - Pagina Inicial" contentType="text/html;charset=UTF-8"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+
+<?link rel="stylesheet" type="text/css" href="/css/jquery.bxslider.css"?>
+
+
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <script src="/css/jquery.bxslider.js"/>
+    <zscript><![CDATA[
+            
+       
+       
+        java.util.Map sites = new java.util.HashMap();
+        
+        
+        sites.put("avaliacao","/Paginas/cliente/avaliacaoCliente.zul");
+        
+
+        void redirect(String name){
+        String loc = sites.get(name);
+            if(loc!=null){
+                Executions.getCurrent().sendRedirect(loc);
+            }
+        }
+     ]]></zscript>
+    <window    id="principal"  style="" contentStyle="overflow:visible" self="@define(content)"   apply=""  >
+        <div style="margin:-4px; background-image: url(${c:encodeURL('/imgs/perfil/uas.png')}); background-repeat:no-repeat; background-size:100% 100%;" >
+           
+           
+            <div sclass="container"  style="background-color:white;">
+                <div class="row" >
+                        
+                    <div class="col-lg-6">
+                        <vbox  align="left" width="100%" spacing="5px" >
+                            <separator />
+                            <image id="" src="/imgs/princ.png" width="120px"   height="25px"/>
+                            <separator bar="true"/>
+                             
+                            <include src="/Paginas/cliente/carousel.zul"/>
+                        </vbox>
+                    </div>
+                    <div class="col-lg-6">
+                        <separator height="45px"/>
+                        <vbox spacing="10px;"> 
+                        <hbox width="100%" height="100%">
+                            <label value="Bem Vindo!"/>
+                        </hbox>
+                        <label multiline="true" value="Customer Care - Sistema de Controle de Satisfação do Cliente."/>
+                        <label style="text-align:justify; text-align-last:justify;" value="Com esta aplicação pode realizar a sua avaliação de Satisfação no atendimento realizado pelos nossos profissionais em diversos sectores."/>
+                        <label style="text-align:justify; text-align-last:justify;" value="Click sobre o botão a baixo para iniciar a sua avaliação"/>
+                       <separator />
+                        <vbox width="100%" align="right">
+                            <button  height="45px" label="Iniciar avaliação" class="btn btn-info" onClick='redirect("avaliacao")'></button>
+                        </vbox>
+                        </vbox>
+                    </div>
+                        
+                </div>
+                    
+                <label sclass="titulo" value="Diversos"/>
+                <separator bar="true"/>
+            
+                <separator height="5px"/>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <panel title="Calendário"  sclass="panel-default">
+                            <panelchildren>
+                                
+                              <calendar id="cal" onChange="in.value = cal.value"/>
+                            
+                            </panelchildren>
+                        </panel>
+                    
+                    
+                    </div>
+                    <div class="col-lg-6">
+                        <panel title="Sobre Matiyanga"    sclass="panel-default">
+                            <panelchildren>
+                           
+                               
+                            </panelchildren>
+                        </panel>
+                    
+                    
+                    
+                        <panel title="Nossos sistemas"  sclass="panel-default">
+                            <panelchildren>
+                                                            
+                            </panelchildren>
+                        </panel>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </window>
+</zk>

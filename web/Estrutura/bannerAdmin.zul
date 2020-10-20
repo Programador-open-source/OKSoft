@@ -1,0 +1,77 @@
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+<?link rel="stylesheet" type="text/css" href="/bootstrap/v3/css/bootstrap.css"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+
+<vlayout hflex="1" vflex="1" style="background-image: url(${c:encodeURL('/imgs/perfil/banner_customer.png')}); background-repeat:no-repeat; background-size:100% 100%; "  >
+
+
+    <div sclass="banner" style="  ">
+        <vbox height="100%" width="100%" pack="end">
+        <style>
+            .test{
+            background-image: linear-gradient(to bottom,#135474, white  );
+            }
+        </style>
+        <zscript><![CDATA[
+            
+       
+       
+        java.util.Map sites = new java.util.HashMap();
+        
+        
+        sites.put("cadastros","/Paginas/admin/cadastros.zul");
+        sites.put("utilitarios","/Paginas/admin/utilitarios.zul");
+        sites.put("configuracoes","/Paginas/admin/configuracoes.zul");
+        sites.put("relatorios","/Paginas/admin/relatorios.zul");   
+        
+        
+            
+
+        void redirect(String name){
+        String loc = sites.get(name);
+            if(loc!=null){
+                Executions.getCurrent().sendRedirect(loc);
+            }
+        }
+     ]]></zscript>
+     
+      
+        
+        
+        
+            
+        <div width="100%" sclass="menubar container">
+            <div class="row">
+                <div style="float:left"> 
+                
+                    <div class="btn-group " >
+                        
+                        <button  image="/icon/ic_note_add_black_18dp.png" class="btn-primary" height="40px" style="border:0px; font-size:14px;font-weight: bold;" onClick='redirect("cadastros")'>CADASTROS</button>   
+                        <button image="/icon/ic_person_add_black_18dp.png" class="btn-primary" height="40px" style="border:0px; font-size:14px;font-weight: bold;" onClick='redirect("utilitarios")'>UTILITÁRIOS</button>
+                        <button image="/icon/ic_settings_black_18dp.png" class="btn-primary" height="40px" style="border:0px; font-size:14px;font-weight: bold;" onClick='redirect("configuracoes")'>CONFIGURAÇÕES</button>
+                        <button image="/icon/ic_event_note_black_18dp.png" class="btn-primary" height="40px" style="border:0px; font-size:14px;font-weight: bold;" onClick='redirect("relatorios")'>RELATÓRIOS</button>
+                    </div>
+                                  
+                
+                    <menupopup id="m1" >
+                        
+                        <menuitem image="/icon/ic_exit_to_app_black_18dp.png" label="Sair" id="logout" if="${not sessionScope.userCredential.anonymous}" />
+                    </menupopup>
+                
+                </div>
+             
+                <div style="float:right">
+                
+                    <div apply="controlador.paginas.LogoutController" class="btn-group ">
+                        <button  image="/icon/ic_account_circle_white_18dp.png" dir="reverse" class="btn-primary btn-sm dropdown-toggle" popup="m1, after_start" iconSclass="caret" height="40px" style="border:0px; font-size:12px;font-weight: bold;" label="${sessionScope.userCredential.name}" ></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </vbox>
+    </div>
+   
+</vlayout>
+
+
